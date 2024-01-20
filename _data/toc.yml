@@ -1,5 +1,0 @@
-- title: "samba4"
-  url: "posts/samba4"
-  children:
-    - title: "Install & provision samba4.19.X"
-      url: "posts/samba4/install-samba4-debian12"
