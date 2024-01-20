@@ -1,5 +1,5 @@
 - title: "Getting Started"
-  url: "docs/getting-started"
+  url: "README.md"
   # children:
   #   - title: Features
   #     url: "docs/getting-started#getting-started"
@@ -7,16 +7,5 @@
   #     url: "docs/getting-started#development"
   #   - title: Customization
   #     url: "docs/getting-started#customization"
-- title: "Extras"
-  url: "docs/extras"
-  children:
-    - title: Quizzes
-      url: "docs/extras/example-quiz"
-    - title: Discussion Forum
-      url: "forum"
-    - title: Interactive Code
-      url: "docs/extras/interactive"
-- title: "About"
-  url: "about"
-- title: "News"
-  url: "news"
+- title: "samba4"
+  url: "posts/install-samba4-debian12"
