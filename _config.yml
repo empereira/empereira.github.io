@@ -5,34 +5,18 @@ plugins:
 title: infomatico
 email: elias.pereira@sertao.ifrs.edu.br
 author: Elias Pereira
-# description: > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
+description: infomatico
 
 markdown: kramdown
 
-# Collections
-collections:
-  docs:
-    output: true
-    permalink: /:collection/:path
-
-# Defaults
 defaults:
   - scope:
       path: "_docs"
       type: "docs"
     values:
       layout: page
-  -
-    scope:
-      path: ""
-      type: "_pages"
-    values:
-      layout: "page"
-  -
-    scope:
+
+  - scope:
       path: "_posts"
       type: "posts"
     values:
