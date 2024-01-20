@@ -1,3 +1,6 @@
+- title: "home"
+  ulr: "docs/getting-started"
+
 - title: "samba4"
   url: "posts/samba"
   children:
