@@ -9,12 +9,6 @@ description: infomatico
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://empereira.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 
-# Build settings
-markdown: kramdown
-theme: minima
-plugins:
-  - jekyll-feed
-
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
