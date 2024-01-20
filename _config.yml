@@ -9,7 +9,7 @@ description: infomatico
 
 permalink: /:year/:title/
 markdown: kramdown
-exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
+exclude: [_site, CHANGELOG.md, LICENSE, vendor]
 
 collections:
   docs:
