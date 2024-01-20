@@ -8,16 +8,3 @@ author: Elias Pereira
 description: infomatico
 
 markdown: kramdown
-
-defaults:
-  - scope:
-      path: "_docs"
-      type: "docs"
-    values:
-      layout: page
-
-  - scope:
-      path: "_posts"
-      type: "posts"
-    values:
-      layout: "post"
