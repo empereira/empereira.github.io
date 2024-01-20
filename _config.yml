@@ -7,8 +7,6 @@ email: elias.pereira@sertao.ifrs.edu.br
 author: Elias Pereira
 description: infomatico
 
-baseurl: "/"
-
 permalink: /:year/:title/
 markdown: kramdown
 exclude: [_site, CHANGELOG.md, LICENSE, README.md, vendor]
