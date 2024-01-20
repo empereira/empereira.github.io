@@ -1,4 +1,7 @@
-# howto
+---
+layout: post
+title: "Instalando Samba 4 no Debian 12"
+---
 
 ## INSTALAÇÃO E PROVISIONAMENTO DO SAMBA 4.19.X
 
