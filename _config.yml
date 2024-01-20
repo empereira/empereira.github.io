@@ -1,12 +1,13 @@
-# remote_theme: vsoch/mkdocs-jekyll
-# plugins:
-# - jekyll-remote-theme
-theme:  jekyll-theme-just-the-docs
+remote_theme: vsoch/mkdocs-jekyll
+plugins:
+- jekyll-remote-theme
 
 title: infomatico
 email: elias.pereira@sertao.ifrs.edu.br
 author: Elias Pereira
 description: infomatico
+
+baseurl: "/"
 
 permalink: /:year/:title/
 markdown: kramdown
