@@ -1,7 +1,7 @@
 - title: "Getting Started"
-  url: "README"
+  url: "docs/getting-started"
 - title: "samba4"
   url: "posts/samba"
   children:
-    - title: "INSTALAÇÃO E PROVISIONAMENTO DO SAMBA 4.19.X"
+    - title: "Install & provision samba4.19.X"
       url: "posts/samba4/install-samba4-debian12#howto"
