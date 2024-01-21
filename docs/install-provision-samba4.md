@@ -4,29 +4,27 @@ Hoje vou apresentar a instalação, provisionamento e ajustes finos do Samba4 DC
 
 [Lista oficial do Samba](https://lists.samba.org/)
 
-**Mãos à obra!**
-
 ## Instalação e Atualização da Distro base
 
-- **Distro:** Debian 12
+**Distro:** Debian 12
 
-### **Atualizando:**
+### Atualizando
 ```bash
 apt update && apt full-upgrade
 ```
 
-### **Modificar o arquivo /etc/hosts:**
+### Modificar o arquivo /etc/hosts
 ```plaintext
 127.0.0.1        localhost
 172.16.1.7       DC1.samdom.dominio.intra   DC1
 ```
 
-### **Modificar o arquivo /etc/hostname:**
+### Modificar o arquivo /etc/hostname
 Configure um nome de hostname:
 ```plaintext
 DC1
 ```
-**Fonte:** [Configuração do Samba como Controlador de Domínio Ativo](https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Preparing_the_Installation)
+**Fonte:** [Configuração do Samba como Controlador de Domínio](https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Preparing_the_Installation)
 
 Reinicie o servidor.
 
@@ -44,19 +42,19 @@ apt-get install --no-install-recommends krb5-user krb5-config libldb2 libnss-win
 
 ## Provisionamento
 
-### **Parâmetros que podem ser usados:**
+### Parâmetros
 Para conhecer todos os parâmetros, pode-se utilizar o comando:
 ```bash
 samba-tool domain provision --help
 ```
 
-### **Comando para o provisionamento:**
+### Comando para o provisionamento
 Para provisionar, execute o comando abaixo.
 ```bash
 samba-tool domain provision --use-rfc2307 --interactive
 ```
 
-**Fonte:** [Configuração do Samba como Controlador de Domínio Ativo](https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller)
+**Fonte:** [Configuração do Samba como Controlador de Domínio](https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller)
 
 ## Restante das Configurações
 
