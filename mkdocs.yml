@@ -1,0 +1,10 @@
+site_name: infomatico
+nav:
+  - Home: index.md
+  - samba4:
+    - ADDC:
+      - Install & provision ADDC 4.19.x: install-provision-samba4.md
+    # - Fileserver:
+  # - freeradius:
+  # - devOps:
+theme: material
