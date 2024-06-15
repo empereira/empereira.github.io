@@ -1,0 +1,3 @@
+# Welcome to infomatico's
+
+O guri da TI, ou da forma mais raiz, sysadmin, o guardião dos servidores e mestre dos códigos, enfrenta diariamente os desafios do reino digital. Com suas habilidades afiadas como uma espada, ele mantém a estabilidade do sistema, defendendo-o contra as ameaças cibernéticas como um cavaleiro destemido. No campo de batalha DevSecOps, ele se une aos desenvolvedores, forjando alianças para criar fortalezas de código seguro. O DevOps, com sua harmonia entre desenvolvimento e operações, é a chave que transforma o caos em sinfonia digital. Juntos, esses heróis modernos trilham o caminho da inovação, construindo pontes entre mundos para garantir a prosperidade do reino tecnológico.
