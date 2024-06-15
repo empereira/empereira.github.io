@@ -11,8 +11,8 @@ nav:
     - Backup & restore: backup-and-restore.md
   - Fileserver:
     - Choosing idmap backend: samba4_idamp_backend.md
-      # - freeradius:
-      # - devOps:
+  - freeradius: under_construiction.md
+  - devOps: under_construiction.md
 
 validation:
   nav:
