@@ -794,7 +794,7 @@
 <h2 id="tipos-de-backends-idmap">Tipos de Backends IDMAP</h2>
 <p>Os backends de mapeamento de IDs no Samba (idmap) são utilizados para gerenciar a correspondência entre os IDs de usuários e grupos no Windows e os IDs Unix (UIDs e GIDs). Três dos principais backends de idmap são <code>ad</code>, <code>rid</code> e <code>autorid</code>. Abaixo está um resumo de cada um deles com exemplos de configuração.</p>
 <h3 id="idmap_ad">idmap_ad</h3>
-<p>O backend <code>ad</code> utiliza os atributos RFC2307 ou SFU (Services for Unix) do Active Directory para mapear usuários e grupos. Isso significa que os atributos <code>uidNumber</code> e <code>gidNumber</code> devem estar definidos no AD para que o mapeamento funcione corretamente. Este backend é adequado quando se deseja que os IDs sejam consistentes e gerenciáveis diretamente no AD.</p>
+<p>O backend <code>ad</code> utiliza os atributos RFC2307 do Active Directory para mapear usuários e grupos. Isso significa que os atributos <code>uidNumber</code> e <code>gidNumber</code> devem estar definidos no AD para que o mapeamento funcione corretamente. Este backend é adequado quando se deseja que os IDs sejam consistentes e gerenciáveis diretamente no AD.</p>
 <p><strong>Exemplo de configuração:</strong></p>
 <pre><code class="language-ini">[global]
    security = ADS
