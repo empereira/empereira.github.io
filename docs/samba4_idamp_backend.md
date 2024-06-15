@@ -6,7 +6,7 @@ Os backends de mapeamento de IDs no Samba (idmap) são utilizados para gerenciar
 
 ### idmap_ad
 
-O backend `ad` utiliza os atributos RFC2307 ou SFU (Services for Unix) do Active Directory para mapear usuários e grupos. Isso significa que os atributos `uidNumber` e `gidNumber` devem estar definidos no AD para que o mapeamento funcione corretamente. Este backend é adequado quando se deseja que os IDs sejam consistentes e gerenciáveis diretamente no AD.
+O backend `ad` utiliza os atributos RFC2307 do Active Directory para mapear usuários e grupos. Isso significa que os atributos `uidNumber` e `gidNumber` devem estar definidos no AD para que o mapeamento funcione corretamente. Este backend é adequado quando se deseja que os IDs sejam consistentes e gerenciáveis diretamente no AD.
 
 **Exemplo de configuração:**
 
