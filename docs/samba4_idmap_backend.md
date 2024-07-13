@@ -46,7 +46,7 @@ O backend `rid` calcula os UIDs e GIDs usando o RID (Relative Identifier) dos ob
    idmap config SAMDOM : range = 1000-999999
 ```
 
-Neste exemplo, o backend `rid` é utilizado para o domínio `SAMDOM`, e os IDs são gerados automaticamente com base nos RIDs do AD【12†source】.
+Neste exemplo, o backend `rid` é utilizado para o domínio `SAMDOM`, e os IDs são gerados automaticamente com base nos RIDs do AD.
 
 ### idmap_autorid
 
@@ -84,7 +84,7 @@ Para um ambiente com 1000 usuários, utilizando 2 ADs e 1 fileserver, a melhor e
 **Razões:**
 1. **Escalabilidade:** `autorid` gerencia múltiplos domínios automaticamente, ideal para configurações com mais de um AD.
 2. **Simplicidade:** Minimiza a administração manual de ID ranges e evita sobreposição de IDs, simplificando a configuração.
-3. **Consistência:** Garante a atribuição de IDs de forma automática e consistente para usuários e grupos em diferentes domínios e servidores【10†source】【12†source】.
+3. **Consistência:** Garante a atribuição de IDs de forma automática e consistente para usuários e grupos em diferentes domínios e servidores.
 
 ### Configuração Exemplo:
 
