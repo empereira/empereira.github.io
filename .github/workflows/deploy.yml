@@ -23,12 +23,12 @@ jobs:
         python -m pip install --upgrade pip
         pip install mkdocs mkdocs-material
 
-     - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          # github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./site
-          publish_branch: gh-pages  # Nome da branch onde o GitHub Pages está configurado
-          destination_dir: docs
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        # github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./site
+        publish_branch: gh-pages # Nome da branch onde o GitHub Pages está configurado
+        destination_dir: docs
       env:
         GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
