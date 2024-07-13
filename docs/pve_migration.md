@@ -70,3 +70,5 @@ qm remote-migrate $VMID $TARGET_VMID "apitoken=${APITOKEN},host=${HOST},fingerpr
 ```
 
 Substitua `YOUR_FINGERPRINT` e `YOUR_HOST_ADDRESS` pelos valores apropriados para seu ambiente. Certifique-se de que os valores sensíveis, como tokens e endereços, estejam seguros e não sejam expostos publicamente.
+
+Para pegar o fingerprint, execute `pvesh  get nodes`
