@@ -7,13 +7,14 @@ nav:
 - home: index.md
 - samba4:
   - ADDC:
-    - Install & provision ADDC 4.19.x: install-provision-samba4.md
-    - Backup & restore: backup-and-restore.md
+    - Install & provision ADDC 4.19.x: samba4_install_provision.md
+    - Backup & restore: samba4_backup-and-restore.md
   - Fileserver:
     - Choosing idmap backend: samba4_idmap_backend.md
 - freeradius: freeradius.md
 - devOps: devops.md
-- proxmox: proxmox.md
+- proxmox:
+  - Migration from non cluster pve to another: pve_migration.md
 
 validation:
   nav:
