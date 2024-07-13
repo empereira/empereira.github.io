@@ -14,17 +14,17 @@ qm remote-migrate <vmid> [<target-vmid>] <target-endpoint> --target-bridge <stri
 
 ### Parâmetros
 
-- **\<vmid\>**: ID único da VM (100 - 999999999).
-- **\<target-vmid\>**: ID único da VM no destino (100 - 999999999).
-- **\<target-endpoint\>**: Ponto de extremidade remoto no formato:
+- **<vmid\>**: ID único da VM (100 - 999999999).
+- **<target-vmid\>**: ID único da VM no destino (100 - 999999999).
+- **<target-endpoint\>**: Ponto de extremidade remoto no formato:
   ```plaintext
   apitoken=<PVEAPIToken=user@realm!token=SECRET>,host=<ADDRESS>[,fingerprint=<FINGERPRINT>][,port=<PORT>]
   ```
-- **--bwlimit \<integer\>**: Limite de largura de banda de E/S (em KiB/s). Padrão: limite de migração da configuração do datacenter ou armazenamento.
-- **--delete \<boolean\>**: Excluir a VM original e dados relacionados após migração bem-sucedida. Padrão: 0 (não excluir).
-- **--online \<boolean\>**: Usar migração online/semi-online se a VM estiver em execução. Ignorado se a VM estiver parada.
-- **--target-bridge \<string\>**: Mapeamento de bridges de origem para destino. Um único ID de bridge mapeia todas as bridges de origem para esta bridge. Valor especial 1 mapeia cada bridge de origem para ela mesma.
-- **--target-storage \<string\>**: Mapeamento de storages de origem para destino. Um único ID de storage mapeia todos os storages de origem para este storage. Valor especial 1 mapeia cada storage de origem para ele mesmo.
+- **--bwlimit <integer\>**: Limite de largura de banda de E/S (em KiB/s). Padrão: limite de migração da configuração do datacenter ou armazenamento.
+- **--delete <boolean\>**: Excluir a VM original e dados relacionados após migração bem-sucedida. Padrão: 0 (não excluir).
+- **--online <boolean\>**: Usar migração online/semi-online se a VM estiver em execução. Ignorado se a VM estiver parada.
+- **--target-bridge <string\>**: Mapeamento de bridges de origem para destino. Um único ID de bridge mapeia todas as bridges de origem para esta bridge. Valor especial 1 mapeia cada bridge de origem para ela mesma.
+- **--target-storage <string\>**: Mapeamento de storages de origem para destino. Um único ID de storage mapeia todos os storages de origem para este storage. Valor especial 1 mapeia cada storage de origem para ele mesmo.
 
 ### Exemplo de Uso
 
