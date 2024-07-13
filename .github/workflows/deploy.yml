@@ -29,4 +29,4 @@ jobs:
         rm -rf site/
         mkdocs gh-deploy --force
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
