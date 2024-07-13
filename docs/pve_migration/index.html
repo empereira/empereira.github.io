@@ -13,10 +13,8 @@
       
       
       
-        <link rel="prev" href="../install-provision-samba4/">
+        <link rel="prev" href="../devops/">
       
-      
-        <link rel="next" href="../samba4_idmap_backend/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +22,7 @@
     
     
       
-        <title>Backup & restore - infomatico</title>
+        <title>Migration from non cluster pve to another - infomatico</title>
       
     
     
@@ -66,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#backup-com-o-bacula" class="md-skip">
+        <a href="#migracao-de-vm-usando-qm-remote-migrate" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Backup & restore
+              Migration from non cluster pve to another
             
           </span>
         </div>
@@ -212,19 +210,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -238,7 +234,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             samba4
@@ -249,19 +245,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -275,7 +269,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             ADDC
@@ -289,7 +283,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../install-provision-samba4/" class="md-nav__link">
+      <a href="../samba4_install_provision/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -307,28 +301,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Backup & restore
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../samba4_backup-and-restore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -337,117 +313,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#backup-com-o-bacula" class="md-nav__link">
-    <span class="md-ellipsis">
-      Backup com o Bacula
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restaurando-o-arquivo-de-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restaurando o arquivo de backup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Restaurando o arquivo de backup">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#preparacao-do-ambiente" class="md-nav__link">
-    <span class="md-ellipsis">
-      Preparação do ambiente
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#executando-o-comando" class="md-nav__link">
-    <span class="md-ellipsis">
-      Executando o comando
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#movendo-e-modificando-arquivos-e-pastas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Movendo e modificando arquivos e pastas
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fazendo-o-demote-do-antigo-dc" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fazendo o demote do antigo DC
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#colocando-no-dominio" class="md-nav__link">
-    <span class="md-ellipsis">
-      Colocando no dominio
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Colocando no dominio">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#reconfigurando-o-dns" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reconfigurando o DNS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#reboot" class="md-nav__link">
-    <span class="md-ellipsis">
-      Reboot
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -576,18 +441,196 @@
       
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../proxmox/" class="md-nav__link">
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     proxmox
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            proxmox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Migration from non cluster pve to another
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Migration from non cluster pve to another
+  </span>
+  
+
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#comando-qm-remote-migrate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comando qm remote-migrate
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Comando qm remote-migrate">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descricao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sintaxe" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sintaxe
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      Exemplo de Uso
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#script-de-migracao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script de Migração
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Script de Migração">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#descricao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Descrição
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#script" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execução
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -609,6 +652,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -617,55 +662,46 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#backup-com-o-bacula" class="md-nav__link">
+  <a href="#comando-qm-remote-migrate" class="md-nav__link">
     <span class="md-ellipsis">
-      Backup com o Bacula
+      Comando qm remote-migrate
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restaurando-o-arquivo-de-backup" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restaurando o arquivo de backup
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Restaurando o arquivo de backup">
+    <nav class="md-nav" aria-label="Comando qm remote-migrate">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#preparacao-do-ambiente" class="md-nav__link">
+  <a href="#descricao" class="md-nav__link">
     <span class="md-ellipsis">
-      Preparação do ambiente
+      Descrição
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#executando-o-comando" class="md-nav__link">
+  <a href="#sintaxe" class="md-nav__link">
     <span class="md-ellipsis">
-      Executando o comando
+      Sintaxe
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#movendo-e-modificando-arquivos-e-pastas" class="md-nav__link">
+  <a href="#parametros" class="md-nav__link">
     <span class="md-ellipsis">
-      Movendo e modificando arquivos e pastas
+      Parâmetros
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#fazendo-o-demote-do-antigo-dc" class="md-nav__link">
+  <a href="#exemplo-de-uso" class="md-nav__link">
     <span class="md-ellipsis">
-      Fazendo o demote do antigo DC
+      Exemplo de Uso
     </span>
   </a>
   
@@ -677,28 +713,37 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#colocando-no-dominio" class="md-nav__link">
+  <a href="#script-de-migracao" class="md-nav__link">
     <span class="md-ellipsis">
-      Colocando no dominio
+      Script de Migração
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Colocando no dominio">
+    <nav class="md-nav" aria-label="Script de Migração">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#reconfigurando-o-dns" class="md-nav__link">
+  <a href="#descricao_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Reconfigurando o DNS
+      Descrição
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#reboot" class="md-nav__link">
+  <a href="#script" class="md-nav__link">
     <span class="md-ellipsis">
-      Reboot
+      Script
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#execucao" class="md-nav__link">
+    <span class="md-ellipsis">
+      Execução
     </span>
   </a>
   
@@ -724,55 +769,58 @@
                   
 
 
-  <h1>Backup & restore</h1>
+<h1 id="migracao-de-vm-usando-qm-remote-migrate">Migração de VM usando <code>qm remote-migrate</code></h1>
+<h2 id="comando-qm-remote-migrate">Comando <code>qm remote-migrate</code></h2>
+<h3 id="descricao">Descrição</h3>
+<p>O comando <code>qm remote-migrate</code> migra uma máquina virtual para um cluster remoto, criando uma nova tarefa de migração. Esta é uma funcionalidade experimental.</p>
+<h3 id="sintaxe">Sintaxe</h3>
+<pre><code class="language-bash">qm remote-migrate &lt;vmid&gt; [&lt;target-vmid&gt;] &lt;target-endpoint&gt; --target-bridge &lt;string&gt; --target-storage &lt;string&gt; [OPÇÕES]
+</code></pre>
+<h3 id="parametros">Parâmetros</h3>
+<ul>
+<li><strong>\&lt;vmid&gt;</strong>: ID único da VM (100 - 999999999).</li>
+<li><strong>\&lt;target-vmid&gt;</strong>: ID único da VM no destino (100 - 999999999).</li>
+<li><strong>\&lt;target-endpoint&gt;</strong>: Ponto de extremidade remoto no formato:
+  <code>plaintext
+  apitoken=&lt;PVEAPIToken=user@realm!token=SECRET&gt;,host=&lt;ADDRESS&gt;[,fingerprint=&lt;FINGERPRINT&gt;][,port=&lt;PORT&gt;]</code></li>
+<li><strong>--bwlimit \&lt;integer&gt;</strong>: Limite de largura de banda de E/S (em KiB/s). Padrão: limite de migração da configuração do datacenter ou armazenamento.</li>
+<li><strong>--delete \&lt;boolean&gt;</strong>: Excluir a VM original e dados relacionados após migração bem-sucedida. Padrão: 0 (não excluir).</li>
+<li><strong>--online \&lt;boolean&gt;</strong>: Usar migração online/semi-online se a VM estiver em execução. Ignorado se a VM estiver parada.</li>
+<li><strong>--target-bridge \&lt;string&gt;</strong>: Mapeamento de bridges de origem para destino. Um único ID de bridge mapeia todas as bridges de origem para esta bridge. Valor especial 1 mapeia cada bridge de origem para ela mesma.</li>
+<li><strong>--target-storage \&lt;string&gt;</strong>: Mapeamento de storages de origem para destino. Um único ID de storage mapeia todos os storages de origem para este storage. Valor especial 1 mapeia cada storage de origem para ele mesmo.</li>
+</ul>
+<h3 id="exemplo-de-uso">Exemplo de Uso</h3>
+<pre><code class="language-bash">qm remote-migrate 101 102 apitoken=user@realm!token=SECRET,host=192.168.1.2 --target-bridge vmbr0 --target-storage local-lvm --bwlimit 512000 --online
+</code></pre>
+<h2 id="script-de-migracao">Script de Migração</h2>
+<h3 id="descricao_1">Descrição</h3>
+<p>Este script migra uma VM de um servidor Proxmox para outro usando <code>qm remote-migrate</code>.</p>
+<h3 id="script">Script</h3>
+<pre><code class="language-bash">#!/bin/bash
 
-<h2 id="backup-com-o-bacula">Backup com o Bacula</h2>
-<p>Pode-se configurar o bacula para backup dos dados e db do AD.</p>
-<h2 id="restaurando-o-arquivo-de-backup">Restaurando o arquivo de backup</h2>
-<p>O passo para restaurar um backup é semelhante à 'provisão de domínio' que você fez quando configurou pela primeira vez sua rede Samba, exceto que desta vez o backup contém todos os objetos de banco de dados que você adicionou desde então. Semelhante à realização de uma provisão, você precisa especificar um novo Controlador de Domínio (DC) ao executar o comando de restauração.</p>
-<h3 id="preparacao-do-ambiente">Preparação do ambiente</h3>
-<p>Como será necessário outro nome de hostname, antes da execução do comando, troque o nome do hostname no arquivo <code>/etc/hostname</code> e também no <code>/etc/hosts</code>.</p>
-<p>Para que os dados fiquem no diretorio default de instalação, terá que mover a pasta <code>/var/lib/samba</code> para outro local.</p>
-<pre><code class="language-bash">mv /var/lib/samba /root
+# Verificar se o número correto de argumentos foi fornecido
+if [ &quot;$#&quot; -ne 3 ]; then
+    echo &quot;Uso: $0 &lt;vmid&gt; &lt;target-vmid&gt; &lt;bwlimit&gt;&quot;
+    exit 1
+fi
+
+# Definir variáveis
+export APITOKEN=&quot;PVEAPIToken=user@realm!token=SECRET&quot;
+export FINGERPRINT=&quot;YOUR_FINGERPRINT&quot;
+export HOST=&quot;YOUR_HOST_ADDRESS&quot;
+
+# Capturar argumentos
+VMID=$1
+TARGET_VMID=$2
+BWLIMIT=$3
+
+# Executar o comando qm remote-migrate
+qm remote-migrate $VMID $TARGET_VMID &quot;apitoken=${APITOKEN},host=${HOST},fingerprint=${FINGERPRINT}&quot; --target-bridge vmbr0 --target-storage local-lvm --online 1 --bwlimit $BWLIMIT
 </code></pre>
-<h3 id="executando-o-comando">Executando o comando</h3>
-<p>Após mover, conseguirá executar o comando abaixo.
-Observe que o diretório de destino especificado deve estar vazio (ou não existir).</p>
-<pre><code class="language-bash">samba-tool domain backup restore --backup-file=samba-backup-2023-12-31T10-06-04.581319.tar.bz2 --newservername=dc002 --targetdir=/var/lib/samba --site=&quot;Default-First-Site-Name&quot; --host-ip=10.10.10.7
+<h3 id="execucao">Execução</h3>
+<pre><code class="language-bash">./migrate.sh &lt;vmid&gt; &lt;target-vmid&gt; &lt;bwlimit&gt;
 </code></pre>
-<h3 id="movendo-e-modificando-arquivos-e-pastas">Movendo e modificando arquivos e pastas</h3>
-<p>Depois do processo de restore, mova a seguinte pasta:</p>
-<ol>
-<li>Dentro da pasta <code>/var/lib/samba/state</code> terá a pasta <code>sysvol</code> que deveerá ser movida para <code>/var/lib/samba</code></li>
-<li>No arquivo <code>/etc/samba/smb.conf</code> substitua o antigo <code>netbios name</code> para o novo nome, no caso do comando acima, <code>dc002</code></li>
-</ol>
-<h3 id="fazendo-o-demote-do-antigo-dc">Fazendo o demote do antigo DC</h3>
-<pre><code class="language-bash">samba-tool domain demote --remove-other-dead-server=DCXXX
-</code></pre>
-<h2 id="colocando-no-dominio">Colocando no dominio</h2>
-<p>Após todos os passos acima, terá que re-colocar no dominio. Para isso execute o comando abaixo.</p>
-<pre><code class="language-bash">samba-tool domain join campus.site.intra DC -U&quot;CAMPUS\administrator&quot; --option='idmap_ldb:use rfc2307 = yes' --dns-backend=BIND9_DLZ
-</code></pre>
-<p>Será solicitado a senha de <code>administrator</code>.</p>
-<h3 id="reconfigurando-o-dns">Reconfigurando o DNS</h3>
-<p>Para reconfigurar o DNS execute o comando abaixo:</p>
-<pre><code class="language-bash">samba_upgradedns --dns-backend=BIND9_DLZ
-</code></pre>
-<p>Verifique se está tudo ok com o DNS.</p>
-<pre><code class="language-bash">samba_dnsupdate --verbose --all-names
-</code></pre>
-<h3 id="reboot">Reboot</h3>
-<p>Por fim, dê um reboot na maquina.</p>
-<p>Teste os serviços do samba e do DNS com os comandos:</p>
-<pre><code class="language-bash">systemctl status samba-ad-dc.service 
-systemctl status named.service
-</code></pre>
-<p>Verifique a replicação</p>
-<pre><code class="language-bash">samba-tool drs showrepl
-</code></pre>
-<p>Verifique os logs</p>
-<pre><code class="language-bash">tail -f /var/log/samba/log.samba
-</code></pre>
+<p>Substitua <code>YOUR_FINGERPRINT</code> e <code>YOUR_HOST_ADDRESS</code> pelos valores apropriados para seu ambiente. Certifique-se de que os valores sensíveis, como tokens e endereços, estejam seguros e não sejam expostos publicamente.</p>
 
 
 

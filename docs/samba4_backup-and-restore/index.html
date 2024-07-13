@@ -13,10 +13,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../samba4_install_provision/">
       
       
-        <link rel="next" href="../backup-and-restore/">
+        <link rel="next" href="../samba4_idmap_backend/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -24,7 +24,7 @@
     
     
       
-        <title>Install & provision ADDC 4.19.x - infomatico</title>
+        <title>Backup & restore - infomatico</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#instalacao-e-atualizacao-da-distro-base" class="md-skip">
+        <a href="#backup-com-o-bacula" class="md-skip">
           Skip to content
         </a>
       
@@ -102,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Install & provision ADDC 4.19.x
+              Backup & restore
             
           </span>
         </div>
@@ -286,6 +286,27 @@
                 
   
   
+  
+  
+    <li class="md-nav__item">
+      <a href="../samba4_install_provision/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Install & provision ADDC 4.19.x
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -300,7 +321,7 @@
           
   
   <span class="md-ellipsis">
-    Install & provision ADDC 4.19.x
+    Backup & restore
   </span>
   
 
@@ -311,7 +332,7 @@
         
   
   <span class="md-ellipsis">
-    Install & provision ADDC 4.19.x
+    Backup & restore
   </span>
   
 
@@ -331,37 +352,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacao-e-atualizacao-da-distro-base" class="md-nav__link">
+  <a href="#backup-com-o-bacula" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação e Atualização da Distro base
+      Backup com o Bacula
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instalação e Atualização da Distro base">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restaurando-o-arquivo-de-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurando o arquivo de backup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restaurando o arquivo de backup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#atualizando" class="md-nav__link">
+  <a href="#preparacao-do-ambiente" class="md-nav__link">
     <span class="md-ellipsis">
-      Atualizando
+      Preparação do ambiente
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modificar-o-arquivo-etchosts" class="md-nav__link">
+  <a href="#executando-o-comando" class="md-nav__link">
     <span class="md-ellipsis">
-      Modificar o arquivo /etc/hosts
+      Executando o comando
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modificar-o-arquivo-etchostname" class="md-nav__link">
+  <a href="#movendo-e-modificando-arquivos-e-pastas" class="md-nav__link">
     <span class="md-ellipsis">
-      Modificar o arquivo /etc/hostname
+      Movendo e modificando arquivos e pastas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazendo-o-demote-do-antigo-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fazendo o demote do antigo DC
     </span>
   </a>
   
@@ -373,37 +412,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacao-do-pacote-samba4" class="md-nav__link">
+  <a href="#colocando-no-dominio" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação do pacote Samba4
+      Colocando no dominio
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#provisionamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Provisionamento
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Provisionamento">
+    <nav class="md-nav" aria-label="Colocando no dominio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#reconfigurando-o-dns" class="md-nav__link">
     <span class="md-ellipsis">
-      Parâmetros
+      Reconfigurando o DNS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comando-para-o-provisionamento" class="md-nav__link">
+  <a href="#reboot" class="md-nav__link">
     <span class="md-ellipsis">
-      Comando para o provisionamento
+      Reboot
     </span>
   </a>
   
@@ -411,15 +441,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restante-das-configuracoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restante das Configurações
-    </span>
-  </a>
   
 </li>
       
@@ -427,27 +448,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../backup-and-restore/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Backup & restore
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -578,16 +578,59 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../proxmox/" class="md-nav__link">
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
         
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     proxmox
   </span>
   
 
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            proxmox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pve_migration/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Migration from non cluster pve to another
+  </span>
+  
+
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 
@@ -617,37 +660,55 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#instalacao-e-atualizacao-da-distro-base" class="md-nav__link">
+  <a href="#backup-com-o-bacula" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação e Atualização da Distro base
+      Backup com o Bacula
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Instalação e Atualização da Distro base">
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restaurando-o-arquivo-de-backup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restaurando o arquivo de backup
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Restaurando o arquivo de backup">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#atualizando" class="md-nav__link">
+  <a href="#preparacao-do-ambiente" class="md-nav__link">
     <span class="md-ellipsis">
-      Atualizando
+      Preparação do ambiente
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modificar-o-arquivo-etchosts" class="md-nav__link">
+  <a href="#executando-o-comando" class="md-nav__link">
     <span class="md-ellipsis">
-      Modificar o arquivo /etc/hosts
+      Executando o comando
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modificar-o-arquivo-etchostname" class="md-nav__link">
+  <a href="#movendo-e-modificando-arquivos-e-pastas" class="md-nav__link">
     <span class="md-ellipsis">
-      Modificar o arquivo /etc/hostname
+      Movendo e modificando arquivos e pastas
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#fazendo-o-demote-do-antigo-dc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fazendo o demote do antigo DC
     </span>
   </a>
   
@@ -659,37 +720,28 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#instalacao-do-pacote-samba4" class="md-nav__link">
+  <a href="#colocando-no-dominio" class="md-nav__link">
     <span class="md-ellipsis">
-      Instalação do pacote Samba4
+      Colocando no dominio
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#provisionamento" class="md-nav__link">
-    <span class="md-ellipsis">
-      Provisionamento
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Provisionamento">
+    <nav class="md-nav" aria-label="Colocando no dominio">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#parametros" class="md-nav__link">
+  <a href="#reconfigurando-o-dns" class="md-nav__link">
     <span class="md-ellipsis">
-      Parâmetros
+      Reconfigurando o DNS
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#comando-para-o-provisionamento" class="md-nav__link">
+  <a href="#reboot" class="md-nav__link">
     <span class="md-ellipsis">
-      Comando para o provisionamento
+      Reboot
     </span>
   </a>
   
@@ -697,15 +749,6 @@
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#restante-das-configuracoes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Restante das Configurações
-    </span>
-  </a>
   
 </li>
       
@@ -724,46 +767,55 @@
                   
 
 
-  <h1>Install & provision ADDC 4.19.x</h1>
+  <h1>Backup & restore</h1>
 
-<p><a href="https://lists.samba.org/">Lista oficial do Samba</a></p>
-<h2 id="instalacao-e-atualizacao-da-distro-base">Instalação e Atualização da Distro base</h2>
-<p><strong>Distro:</strong> Debian 12</p>
-<h3 id="atualizando">Atualizando</h3>
-<pre><code class="language-bash">apt update &amp;&amp; apt full-upgrade
+<h2 id="backup-com-o-bacula">Backup com o Bacula</h2>
+<p>Pode-se configurar o bacula para backup dos dados e db do AD.</p>
+<h2 id="restaurando-o-arquivo-de-backup">Restaurando o arquivo de backup</h2>
+<p>O passo para restaurar um backup é semelhante à 'provisão de domínio' que você fez quando configurou pela primeira vez sua rede Samba, exceto que desta vez o backup contém todos os objetos de banco de dados que você adicionou desde então. Semelhante à realização de uma provisão, você precisa especificar um novo Controlador de Domínio (DC) ao executar o comando de restauração.</p>
+<h3 id="preparacao-do-ambiente">Preparação do ambiente</h3>
+<p>Como será necessário outro nome de hostname, antes da execução do comando, troque o nome do hostname no arquivo <code>/etc/hostname</code> e também no <code>/etc/hosts</code>.</p>
+<p>Para que os dados fiquem no diretorio default de instalação, terá que mover a pasta <code>/var/lib/samba</code> para outro local.</p>
+<pre><code class="language-bash">mv /var/lib/samba /root
 </code></pre>
-<h3 id="modificar-o-arquivo-etchosts">Modificar o arquivo /etc/hosts</h3>
-<pre><code class="language-plaintext">127.0.0.1        localhost
-172.16.1.7       DC1.samdom.dominio.intra   DC1
+<h3 id="executando-o-comando">Executando o comando</h3>
+<p>Após mover, conseguirá executar o comando abaixo.
+Observe que o diretório de destino especificado deve estar vazio (ou não existir).</p>
+<pre><code class="language-bash">samba-tool domain backup restore --backup-file=samba-backup-2023-12-31T10-06-04.581319.tar.bz2 --newservername=dc002 --targetdir=/var/lib/samba --site=&quot;Default-First-Site-Name&quot; --host-ip=10.10.10.7
 </code></pre>
-<h3 id="modificar-o-arquivo-etchostname">Modificar o arquivo /etc/hostname</h3>
-<p>Configure um nome de hostname:</p>
-<pre><code class="language-plaintext">DC1
+<h3 id="movendo-e-modificando-arquivos-e-pastas">Movendo e modificando arquivos e pastas</h3>
+<p>Depois do processo de restore, mova a seguinte pasta:</p>
+<ol>
+<li>Dentro da pasta <code>/var/lib/samba/state</code> terá a pasta <code>sysvol</code> que deveerá ser movida para <code>/var/lib/samba</code></li>
+<li>No arquivo <code>/etc/samba/smb.conf</code> substitua o antigo <code>netbios name</code> para o novo nome, no caso do comando acima, <code>dc002</code></li>
+</ol>
+<h3 id="fazendo-o-demote-do-antigo-dc">Fazendo o demote do antigo DC</h3>
+<pre><code class="language-bash">samba-tool domain demote --remove-other-dead-server=DCXXX
 </code></pre>
-<p><strong>Fonte:</strong> <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Preparing_the_Installation">Configuração do Samba como Controlador de Domínio</a></p>
-<p>Reinicie o servidor.</p>
-<h2 id="instalacao-do-pacote-samba4">Instalação do pacote Samba4</h2>
-<pre><code class="language-bash">apt-get install gnupg
-gpg --keyserver hkp://keyring.debian.org --recv-key 701B4F6B1A693E59
-gpg --export --armor 804465C5 | gpg --dearmour -o /etc/apt/keyrings/804465C5.gpg
-gpg --delete-key 804465C5
-echo &quot;deb [signed-by=/etc/apt/keyrings/804465C5.gpg] http://www.corpit.ru/mjt/packages/samba bookworm/samba-4.19/&quot; | tee -a /etc/apt/sources.list.d/mjt-samba4.list
-apt-get update
-apt-get install --no-install-recommends krb5-user krb5-config libldb2 libnss-winbind libpam-winbind libwbclient0 python3-ldb python3-samba samba samba-common samba-common-bin samba-dsdb-modules samba-libs samba-vfs-modules winbind
+<h2 id="colocando-no-dominio">Colocando no dominio</h2>
+<p>Após todos os passos acima, terá que re-colocar no dominio. Para isso execute o comando abaixo.</p>
+<pre><code class="language-bash">samba-tool domain join campus.site.intra DC -U&quot;CAMPUS\administrator&quot; --option='idmap_ldb:use rfc2307 = yes' --dns-backend=BIND9_DLZ
 </code></pre>
-<h2 id="provisionamento">Provisionamento</h2>
-<h3 id="parametros">Parâmetros</h3>
-<p>Para conhecer todos os parâmetros, pode-se utilizar o comando:</p>
-<pre><code class="language-bash">samba-tool domain provision --help
+<p>Será solicitado a senha de <code>administrator</code>.</p>
+<h3 id="reconfigurando-o-dns">Reconfigurando o DNS</h3>
+<p>Para reconfigurar o DNS execute o comando abaixo:</p>
+<pre><code class="language-bash">samba_upgradedns --dns-backend=BIND9_DLZ
 </code></pre>
-<h3 id="comando-para-o-provisionamento">Comando para o provisionamento</h3>
-<p>Para provisionar, execute o comando abaixo.</p>
-<pre><code class="language-bash">samba-tool domain provision --use-rfc2307 --interactive
+<p>Verifique se está tudo ok com o DNS.</p>
+<pre><code class="language-bash">samba_dnsupdate --verbose --all-names
 </code></pre>
-<p><strong>Fonte:</strong> <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller">Configuração do Samba como Controlador de Domínio</a></p>
-<h2 id="restante-das-configuracoes">Restante das Configurações</h2>
-<p>Acesse o <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Configuring_the_DNS_Resolver">link</a> abaixo e siga o restante das configurações.</p>
-<p><a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Configuring_the_DNS_Resolver">Configurando o resolvedor DNS</a></p>
+<h3 id="reboot">Reboot</h3>
+<p>Por fim, dê um reboot na maquina.</p>
+<p>Teste os serviços do samba e do DNS com os comandos:</p>
+<pre><code class="language-bash">systemctl status samba-ad-dc.service 
+systemctl status named.service
+</code></pre>
+<p>Verifique a replicação</p>
+<pre><code class="language-bash">samba-tool drs showrepl
+</code></pre>
+<p>Verifique os logs</p>
+<pre><code class="language-bash">tail -f /var/log/samba/log.samba
+</code></pre>
 
 
 

@@ -13,8 +13,10 @@
       
       
       
-        <link rel="prev" href="../devops/">
+        <link rel="prev" href="..">
       
+      
+        <link rel="next" href="../samba4_backup-and-restore/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -22,7 +24,7 @@
     
     
       
-        <title>proxmox - infomatico</title>
+        <title>Install & provision ADDC 4.19.x - infomatico</title>
       
     
     
@@ -64,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#under-construction" class="md-skip">
+        <a href="#instalacao-e-atualizacao-da-distro-base" class="md-skip">
           Skip to content
         </a>
       
@@ -100,7 +102,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              proxmox
+              Install & provision ADDC 4.19.x
             
           </span>
         </div>
@@ -210,17 +212,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -234,7 +238,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             samba4
@@ -245,17 +249,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -269,7 +275,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             ADDC
@@ -280,10 +286,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../install-provision-samba4/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Install & provision ADDC 4.19.x
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -292,6 +316,117 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-e-atualizacao-da-distro-base" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação e Atualização da Distro base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação e Atualização da Distro base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atualizando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-o-arquivo-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar o arquivo /etc/hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-o-arquivo-etchostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar o arquivo /etc/hostname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-pacote-samba4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação do pacote Samba4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisionamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisionamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-para-o-provisionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comando para o provisionamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restante-das-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restante das Configurações
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -304,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../backup-and-restore/" class="md-nav__link">
+      <a href="../samba4_backup-and-restore/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -441,62 +576,60 @@
       
   
   
+  
+  
     
-  
-  
-  
-    <li class="md-nav__item md-nav__item--active">
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
           
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
   
   <span class="md-ellipsis">
     proxmox
   </span>
   
 
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            proxmox
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../pve_migration/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    proxmox
+    Migration from non cluster pve to another
   </span>
   
 
       </a>
-      
-        
+    </li>
+  
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#under-construction" class="md-nav__link">
-    <span class="md-ellipsis">
-      UNDER CONSTRUCTION
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -527,9 +660,93 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#under-construction" class="md-nav__link">
+  <a href="#instalacao-e-atualizacao-da-distro-base" class="md-nav__link">
     <span class="md-ellipsis">
-      UNDER CONSTRUCTION
+      Instalação e Atualização da Distro base
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Instalação e Atualização da Distro base">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#atualizando" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atualizando
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-o-arquivo-etchosts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar o arquivo /etc/hosts
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modificar-o-arquivo-etchostname" class="md-nav__link">
+    <span class="md-ellipsis">
+      Modificar o arquivo /etc/hostname
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#instalacao-do-pacote-samba4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Instalação do pacote Samba4
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#provisionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Provisionamento
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Provisionamento">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#parametros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Parâmetros
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#comando-para-o-provisionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      Comando para o provisionamento
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#restante-das-configuracoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Restante das Configurações
     </span>
   </a>
   
@@ -550,9 +767,46 @@
                   
 
 
-  <h1>proxmox</h1>
+  <h1>Install & provision ADDC 4.19.x</h1>
 
-<h2 id="under-construction">UNDER CONSTRUCTION</h2>
+<p><a href="https://lists.samba.org/">Lista oficial do Samba</a></p>
+<h2 id="instalacao-e-atualizacao-da-distro-base">Instalação e Atualização da Distro base</h2>
+<p><strong>Distro:</strong> Debian 12</p>
+<h3 id="atualizando">Atualizando</h3>
+<pre><code class="language-bash">apt update &amp;&amp; apt full-upgrade
+</code></pre>
+<h3 id="modificar-o-arquivo-etchosts">Modificar o arquivo /etc/hosts</h3>
+<pre><code class="language-plaintext">127.0.0.1        localhost
+172.16.1.7       DC1.samdom.dominio.intra   DC1
+</code></pre>
+<h3 id="modificar-o-arquivo-etchostname">Modificar o arquivo /etc/hostname</h3>
+<p>Configure um nome de hostname:</p>
+<pre><code class="language-plaintext">DC1
+</code></pre>
+<p><strong>Fonte:</strong> <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Preparing_the_Installation">Configuração do Samba como Controlador de Domínio</a></p>
+<p>Reinicie o servidor.</p>
+<h2 id="instalacao-do-pacote-samba4">Instalação do pacote Samba4</h2>
+<pre><code class="language-bash">apt-get install gnupg
+gpg --keyserver hkp://keyring.debian.org --recv-key 701B4F6B1A693E59
+gpg --export --armor 804465C5 | gpg --dearmour -o /etc/apt/keyrings/804465C5.gpg
+gpg --delete-key 804465C5
+echo &quot;deb [signed-by=/etc/apt/keyrings/804465C5.gpg] http://www.corpit.ru/mjt/packages/samba bookworm/samba-4.19/&quot; | tee -a /etc/apt/sources.list.d/mjt-samba4.list
+apt-get update
+apt-get install --no-install-recommends krb5-user krb5-config libldb2 libnss-winbind libpam-winbind libwbclient0 python3-ldb python3-samba samba samba-common samba-common-bin samba-dsdb-modules samba-libs samba-vfs-modules winbind
+</code></pre>
+<h2 id="provisionamento">Provisionamento</h2>
+<h3 id="parametros">Parâmetros</h3>
+<p>Para conhecer todos os parâmetros, pode-se utilizar o comando:</p>
+<pre><code class="language-bash">samba-tool domain provision --help
+</code></pre>
+<h3 id="comando-para-o-provisionamento">Comando para o provisionamento</h3>
+<p>Para provisionar, execute o comando abaixo.</p>
+<pre><code class="language-bash">samba-tool domain provision --use-rfc2307 --interactive
+</code></pre>
+<p><strong>Fonte:</strong> <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller">Configuração do Samba como Controlador de Domínio</a></p>
+<h2 id="restante-das-configuracoes">Restante das Configurações</h2>
+<p>Acesse o <a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Configuring_the_DNS_Resolver">link</a> abaixo e siga o restante das configurações.</p>
+<p><a href="https://wiki.samba.org/index.php/Setting_up_Samba_as_an_Active_Directory_Domain_Controller#Configuring_the_DNS_Resolver">Configurando o resolvedor DNS</a></p>
 
 
 
