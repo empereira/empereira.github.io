@@ -23,15 +23,13 @@ jobs:
         python -m pip install --upgrade pip
         pip install mkdocs mkdocs-material
 
+    - name: Build the site
+      run: mkdocs build
+
     - name: Deploy to GitHub Pages
-      run: |
-        git push origin --delete gh-pages
-        rm -rf site/
-        mkdocs gh-deploy --force
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./site
-        publish_branch: gh-pages # Nome da branch onde o GitHub Pages está configurado
+        publish_branch: gh-pages
         destination_dir: docs
-      # env:
-      #   GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
