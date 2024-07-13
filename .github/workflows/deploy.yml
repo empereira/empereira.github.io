@@ -24,9 +24,14 @@ jobs:
         pip install mkdocs mkdocs-material
 
     - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+      run: |
+        git push origin --delete gh-pages
+        rm -rf site/
+        mkdocs gh-deploy --force
       with:
         github_token: ${{ secrets.ACTIONS_DEPLOY_KEY }}
         publish_dir: ./site
         publish_branch: gh-pages # Nome da branch onde o GitHub Pages está configurado
         destination_dir: docs
+      # env:
+      #   GITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_KEY }}
