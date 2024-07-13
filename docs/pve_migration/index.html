@@ -778,16 +778,16 @@
 </code></pre>
 <h3 id="parametros">Parâmetros</h3>
 <ul>
-<li><strong>\&lt;vmid&gt;</strong>: ID único da VM (100 - 999999999).</li>
-<li><strong>\&lt;target-vmid&gt;</strong>: ID único da VM no destino (100 - 999999999).</li>
-<li><strong>\&lt;target-endpoint&gt;</strong>: Ponto de extremidade remoto no formato:
+<li><strong>&lt;vmid&gt;</strong>: ID único da VM (100 - 999999999).</li>
+<li><strong>&lt;target-vmid&gt;</strong>: ID único da VM no destino (100 - 999999999).</li>
+<li><strong>&lt;target-endpoint&gt;</strong>: Ponto de extremidade remoto no formato:
   <code>plaintext
   apitoken=&lt;PVEAPIToken=user@realm!token=SECRET&gt;,host=&lt;ADDRESS&gt;[,fingerprint=&lt;FINGERPRINT&gt;][,port=&lt;PORT&gt;]</code></li>
-<li><strong>--bwlimit \&lt;integer&gt;</strong>: Limite de largura de banda de E/S (em KiB/s). Padrão: limite de migração da configuração do datacenter ou armazenamento.</li>
-<li><strong>--delete \&lt;boolean&gt;</strong>: Excluir a VM original e dados relacionados após migração bem-sucedida. Padrão: 0 (não excluir).</li>
-<li><strong>--online \&lt;boolean&gt;</strong>: Usar migração online/semi-online se a VM estiver em execução. Ignorado se a VM estiver parada.</li>
-<li><strong>--target-bridge \&lt;string&gt;</strong>: Mapeamento de bridges de origem para destino. Um único ID de bridge mapeia todas as bridges de origem para esta bridge. Valor especial 1 mapeia cada bridge de origem para ela mesma.</li>
-<li><strong>--target-storage \&lt;string&gt;</strong>: Mapeamento de storages de origem para destino. Um único ID de storage mapeia todos os storages de origem para este storage. Valor especial 1 mapeia cada storage de origem para ele mesmo.</li>
+<li><strong>--bwlimit &lt;integer&gt;</strong>: Limite de largura de banda de E/S (em KiB/s). Padrão: limite de migração da configuração do datacenter ou armazenamento.</li>
+<li><strong>--delete &lt;boolean&gt;</strong>: Excluir a VM original e dados relacionados após migração bem-sucedida. Padrão: 0 (não excluir).</li>
+<li><strong>--online &lt;boolean&gt;</strong>: Usar migração online/semi-online se a VM estiver em execução. Ignorado se a VM estiver parada.</li>
+<li><strong>--target-bridge &lt;string&gt;</strong>: Mapeamento de bridges de origem para destino. Um único ID de bridge mapeia todas as bridges de origem para esta bridge. Valor especial 1 mapeia cada bridge de origem para ela mesma.</li>
+<li><strong>--target-storage &lt;string&gt;</strong>: Mapeamento de storages de origem para destino. Um único ID de storage mapeia todos os storages de origem para este storage. Valor especial 1 mapeia cada storage de origem para ele mesmo.</li>
 </ul>
 <h3 id="exemplo-de-uso">Exemplo de Uso</h3>
 <pre><code class="language-bash">qm remote-migrate 101 102 apitoken=user@realm!token=SECRET,host=192.168.1.2 --target-bridge vmbr0 --target-storage local-lvm --bwlimit 512000 --online
