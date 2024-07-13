@@ -13,7 +13,7 @@ nav:
     - Choosing idmap backend: samba4_idmap_backend.md
 - freeradius: under_construction.md
 - devOps: under_construction.md
-- proxmox: under_coonstruction.md
+- proxmox: under_construction.md
 
 validation:
   nav:
