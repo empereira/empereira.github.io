@@ -2,6 +2,7 @@ theme: material
 site_name: infomatico
 site_author: Elias Pereira
 site_description: infomatico
+copyright: Copyright &copy; 2024 - Elias Pereira
 
 nav:
 - home: index.md
