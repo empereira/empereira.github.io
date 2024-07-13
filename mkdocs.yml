@@ -11,9 +11,9 @@ nav:
     - Backup & restore: backup-and-restore.md
   - Fileserver:
     - Choosing idmap backend: samba4_idmap_backend.md
-- freeradius: under_construction.md
-- devOps: under_construction.md
-- proxmox: under_construction.md
+- freeradius: freeradius.md
+- devOps: devops.md
+- proxmox: proxmox.md
 
 validation:
   nav:
